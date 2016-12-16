@@ -50,6 +50,10 @@ a{
       color: rgb(130,201,219);
       text-decoration: underline;
 }
-li{
+#main_content li{
+      color:white;
+      margin: 0 0 15px 0;
+}
+#nav li{
       color:white;
 }
