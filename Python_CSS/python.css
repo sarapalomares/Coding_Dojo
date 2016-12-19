@@ -1,0 +1,89 @@
+* {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica", "Arial", sans-serif;
+      font-weight: normal;
+}
+#container{
+      width: 960px;
+      margin: 0 auto;
+}
+#header{
+      background-color: #265175;
+      width: 960px;
+      height: 125px;
+}
+#headerlogo{
+      background-image: url("python.png");
+      background-size: contain;
+      height: 100px;
+      width: 350px;
+      margin-top: 15px;
+      margin-left: 15px;
+      display: inline-block;
+      vertical-align: top;
+}
+#headerTextRight{
+      display: inline-block;
+      vertical-align: top;
+      height: 100px;
+      width: 275px;
+      margin-top: 10px;
+      margin-left: 310px;
+      font-size: 10pt;
+}
+#headerTextRight ul li{
+    display: inline-block;
+    vertical-align: top;
+}
+#headerTextRight a{
+      color: #FDD243;
+}
+.yellow{
+      color: #FDD243;
+      text-decoration: underline;
+}
+.white{
+      color: white;
+}
+#searchBox{
+    width: 100%;
+    height: 60px;
+    background-color: #444;
+    border-radius: 10px;
+    box-shadow: 2px 2px 1px #1f1f1f;
+}
+#searchForm{
+    display: inline-block;
+    vertical-align: top;
+}
+#searchBar{
+    width: 150px;
+    height: 28px;
+    margin-top: 13px;
+    margin-left: 10px;
+    box-shadow: 1px 1px 1px #1f1f1f;
+}
+#searchButton{
+    height: 30px;
+    width: 40px;
+    color: white;
+    background-color: #265175;
+    box-shadow: 1px 1px 1px #1f1f1f;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 3px;
+}
+#nav{
+      background-color: #265175;
+      height: 100px;
+}
+#main1{
+      background-color: #265175;
+}
+#main2{
+      background-color: white;
+}
+#footer{
+      background: linear-gradient (#265175, black);
+}
