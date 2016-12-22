@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+      <head>
+            <title>jQuery Functions Assignment</title>
+            <style>
+                  .heading {
+                        color: #D4178F;
+                        font-weight: bold;
+                        font-size: 17px;
+                  }
+
+                  #slidedown_begin, #slidedown_show {
+                        padding: 5px;
+                        background-color: blue;
+                        color: white;
+                        border: solid 1px black;
+                        display: block;
+                        width: 201px;
+                  }
+
+                  #sidedown_show {
+                        padding: 50px;
+                        display: none;
+                  }
+
+                  #slideup_begin, #slideup_show{
+                        padding: 5px;
+                        background-color: orange;
+                        color: white;
+                        border: solid 1px black;
+                        display: block;
+                        width: 250px;
+                  }
+
+                  #sidetoggle_show {
+                        padding: 50px;
+                        display: none;
+                  }
+
+                  #slidetoggle_begin, #slidetoggle_show{
+                        padding: 5px;
+                        background-color: green;
+                        color: white;
+                        border: solid 1px black;
+                        display: block;
+                        width: 305px;
+                  }
+
+                  #redBox, #yellowBox, #purpleBox, #orangeBox, #greenBox, #blueBox{
+                        border: solid 1px black;
+                  }
+
+                  .changeP{
+                        font-size: 25px;
+                        color: red;
+                  }
+                  .textInfo{
+                        font-style: italic;
+                  }
+
+                  span{
+                        color:red;
+                        font-style: italic;
+                  }
+
+            </style>
+            <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+            <script type="text/javascript">
+                  $(document).ready(function(){
+
+                  // alert('you are now working with jQuery!');
+
+                        $('#slidedown_show').hide();
+
+                        $('#redBox').hide();
+                        $('#yellowBox').hide();
+                        $('#purpleBox').hide();
+
+                        $('#click_example1').click(function(){
+                              alert('This is an example of dot click.');
+                        });
+
+                        $('#hide').click(function(){
+                             $('#showHide_example1').hide();
+                        });
+
+                        $('#show').click(function(){
+                             $('#showHide_example1').show();
+                        });
+
+                        $('#toggle').click(function(){
+                              $('#toggle_example1').toggle();
+                        });
+
+                        $("#slidedown_begin").click(function(){
+                              $("#slidedown_show").slideDown("slow", function(){
+                              });
+                        });
+
+                        $("#slideup_begin").click(function(){
+                              $("#slideup_show").slideUp("slow", function(){
+                              });
+                        });
+
+                        $("#slidetoggle_begin").click(function(){
+                              $("#slidetoggle_show").slideToggle("slow", function(){
+                              });
+                        });
+
+                        $("#fadeIn").click(function(){
+                              $("#redBox").fadeIn();
+                              $("#yellowBox").fadeIn("slow");
+                              $("#purpleBox").fadeIn(1000);
+                        });
+
+                        $("#fadeOut").click(function(){
+                              $("#orangeBox").fadeOut();
+                              $("#greenBox").fadeOut("slow");
+                              $("#blueBox").fadeOut(1000);
+                        });
+
+                        $("#addClassBtn").click(function(){
+                              $("#addClassP:first").addClass("changeP");
+
+                        });
+
+                        $("#beforeBtn").click(function(){
+                              $("#beforeP").before("<p>Excuse me!</p>");
+                        });
+
+                        $("#afterBtn").click(function(){
+                              $("#afterP").after("<p>I'll scoot under here; you'll never notice me.</p>");
+                        });
+
+                        $("#appendBtn").click(function(){
+                              $("#appendP").append(" Let's add some text here.");
+                        });
+
+                        $("#htmlBtn").click(function(){
+                              $("#htmlP").html("<b>See? Told ya.</b>");
+                        });
+
+                        $("#attrBtn").click(function(){
+                              $("img").attr("width", "600");
+                        });
+
+                        $("#valBtn").click(function(){
+                              $("input:text").val("Oliver Otter");
+                        });
+
+                        $("#textBtn").click(function(){
+                              $("#textP").text("New text hurrr.");
+                        });
+
+                        $("#textP").data("test", { first: "sea otter ", last: " green"});
+                        $("span:first").text($("#textP").data("test").first);
+                        $("span:last" ).text($("#textP").data("test").last);
+                  });
+            </script>
+      </head>
+      <body>
+            <div id="DotClick_Example">
+                  <p class="heading">.Click Example</p>
+                  <p id='click_example1'>Click me!</p>
+                  <hr>
+            </div>
+            <div id="ShowHide_Example">
+                  <p class="heading">Show/Hide Example</p>
+                  <p id="showHide_example1">If you click on the hide button, I will disappear!</p>
+                  <button id="hide">Hide</button>
+                  <button id="show">Show</button>
+                  <hr>
+            </div>
+            <div id="Toggle_Example">
+                  <p class="heading">Togging Example</p>
+                  <button id="toggle">Toggle between hiding and showing this section</button>
+                  <p id='toggle_example1'>Want to see a magic trick? Watch me disappear...</p>
+                  <hr>
+            </div>
+            <div id="SlideDown_Example">
+                  <p class="heading">Slide Down Example</p>
+                  <p id="slidedown_begin">Click me to see text slide down</p>
+                  <p id="slidedown_show">Peekaboo!</p>
+                  <hr>
+            </div>
+            <div id="SlideUp_Example">
+                  <p class="heading">Slide Up Example</p>
+                  <p id="slideup_begin">Click me to see the text below slide up</p>
+                  <p id="slideup_show">See ya!</p>
+                  <hr>
+            </div>
+            <div id="SlideToggle_Example">
+                  <p class="heading">Slide Toggle Example</p>
+                  <p id="slidetoggle_begin">Click me to see the text below slide up or down</p>
+                  <p id="slidetoggle_show">I'm like a yoyo!</p>
+                  <hr>
+            </div>
+            <div id="FadeIn_Example">
+                  <p class="heading">Fade In Example</p>
+                  <button id="fadeIn">Show some hidden boxes below</button></div><br>
+                  <div id="redBox" style=width:80px;height:80px;background-color:red;"></div><br>
+                  <div id="yellowBox" style=width:80px;height:80px;background-color:yellow;"></div><br>
+                  <div id="purpleBox" style=width:80px;height:80px;background-color:purple;"></div><br>
+                  <hr>
+            </div>
+            <div id="FadeOut_Example">
+                  <p class="heading">Fade Out Example</p>
+                  <button id="fadeOut">Fade out the boxes below</button></div><br>
+                  <div id="orangeBox" style=width:80px;height:80px;background-color:orange;"></div><br>
+                  <div id="greenBox" style=width:80px;height:80px;background-color:green;"></div><br>
+                  <div id="blueBox" style=width:80px;height:80px;background-color:blue;"></div><br>
+                  <hr>
+            </div>
+            <div id="AddClass_Example">
+                  <p class="heading">Add Class Example</p>
+                  <p id="addClassP">Here is some text.</p>
+                  <p id="addClassP">Here is some more text.</p>
+                  <button id="addClassBtn">Change the color of the first paragraph</button>
+                  <hr>
+            </div>
+            <div id="Before_Example">
+                  <p class="heading">.Before Example</p>
+                  <p id="beforeP">Here is some text.</p>
+                  <button id="beforeBtn">Insert content BEFORE the paragraph</button>
+                  <hr>
+            </div>
+            <div id="After_Example">
+                  <p class="heading">.After Example</p>
+                  <p id="afterP">Here is some text.</p>
+                  <button id="afterBtn">Insert content AFTER the paragraph</button>
+                  <hr>
+            </div>
+            <div id="Append_Example">
+                  <p class="heading">Append Example</p>
+                  <p id="appendP">Here is a line of text to start with.</p>
+                  <button id="appendBtn">Click here to add some text after the paragraph.</button>
+                  <hr>
+            </div>
+            <div id="HTML_Example">
+                  <p class="heading">.HTML Example</p>
+                  <p id="htmlP">This text is going to change.</p>
+                  <button id="htmlBtn">Click here to completely change this paragraph.</button>
+                  <hr>
+            </div>
+            <div id="ATT_Example">
+                  <p class="heading">.attr Example</p>
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Sea_otter_cropped.jpg" alt="Sea Otter" width="357" height="277"><br>
+                  <button id="attrBtn">Click here to change the attributes.</button>
+                  <hr>
+            </div>
+            <div id="Val_Example">
+                  <p class="heading">.val Example</p>
+                  <p id="valInput">Name: <input type="text" name="user"></p>
+                  <button id="valBtn">Click here to set value</button>
+                  <hr>
+            </div>
+            <div id="Text_Example">
+                  <p class="heading">.text Example</p>
+                  <p id="textP">This text is going to change.</p>
+                  <button id="textBtn">Click here to change the text</button>
+                  <hr>
+            </div>
+            <div id="Data_Example">
+                  <p class="heading">.data Example</p>
+                  <p id="textP">My favorite animal is the <span></span>and my favorite color is<span></span>.</p>
+                  <p class="textInfo">("sea otter" and "green" were stored in the .data function.)</p>
+                  <hr>
+            </div>
+      </body>
+</html>
