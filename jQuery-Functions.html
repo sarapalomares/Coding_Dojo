@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
       <head>
+            <meta charset="utf-8">
             <title>jQuery Functions Assignment</title>
             <style>
                   .heading {
@@ -152,9 +153,9 @@
                               $("#textP").text("New text hurrr.");
                         });
 
-                        $("#textP").data("test", { first: "sea otter ", last: " green"});
-                        $("span:first").text($("#textP").data("test").first);
-                        $("span:last" ).text($("#textP").data("test").last);
+                        $("#dataP").data("test", { first: "sea otter ", last: " green"});
+                        $("span:first").text($("#dataP").data("test").first);
+                        $("span:last" ).text($("#dataP").data("test").last);
                   });
             </script>
       </head>
@@ -197,25 +198,24 @@
             </div>
             <div id="FadeIn_Example">
                   <p class="heading">Fade In Example</p>
-                  <button id="fadeIn">Show some hidden boxes below</button></div><br>
-                  <div id="redBox" style=width:80px;height:80px;background-color:red;"></div><br>
-                  <div id="yellowBox" style=width:80px;height:80px;background-color:yellow;"></div><br>
-                  <div id="purpleBox" style=width:80px;height:80px;background-color:purple;"></div><br>
+                  <button id="fadeIn">Show some hidden boxes below</button><br>
+                  <div id="redBox" style=width:80px;height:80px;background-color:red;></div><br>
+                  <div id="yellowBox" style=width:80px;height:80px;background-color:yellow;></div><br>
+                  <div id="purpleBox" style=width:80px;height:80px;background-color:purple;></div><br>
                   <hr>
             </div>
             <div id="FadeOut_Example">
                   <p class="heading">Fade Out Example</p>
-                  <button id="fadeOut">Fade out the boxes below</button></div><br>
-                  <div id="orangeBox" style=width:80px;height:80px;background-color:orange;"></div><br>
-                  <div id="greenBox" style=width:80px;height:80px;background-color:green;"></div><br>
-                  <div id="blueBox" style=width:80px;height:80px;background-color:blue;"></div><br>
+                  <button id="fadeOut">Fade out the boxes below</button><br>
+                  <div id="orangeBox" style=width:80px;height:80px;background-color:orange;></div><br>
+                  <div id="greenBox" style=width:80px;height:80px;background-color:green;></div><br>
+                  <div id="blueBox" style=width:80px;height:80px;background-color:blue;></div><br>
                   <hr>
             </div>
             <div id="AddClass_Example">
                   <p class="heading">Add Class Example</p>
                   <p id="addClassP">Here is some text.</p>
-                  <p id="addClassP">Here is some more text.</p>
-                  <button id="addClassBtn">Change the color of the first paragraph</button>
+                  <button id="addClassBtn">Change the color of the paragraph</button>
                   <hr>
             </div>
             <div id="Before_Example">
@@ -262,7 +262,7 @@
             </div>
             <div id="Data_Example">
                   <p class="heading">.data Example</p>
-                  <p id="textP">My favorite animal is the <span></span>and my favorite color is<span></span>.</p>
+                  <p id="dataP">My favorite animal is the <span></span>and my favorite color is<span></span>.</p>
                   <p class="textInfo">("sea otter" and "green" were stored in the .data function.)</p>
                   <hr>
             </div>
