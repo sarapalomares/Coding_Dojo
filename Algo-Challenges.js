@@ -113,7 +113,7 @@ function maxMinAvg(arr) {
 		}
 		sum = sum + arr[i];
 	}
-	var avg = sum / arr.length;
+	var avg = sum/arr.length;
 	var arrnew = [max, min, avg];
 	return arrnew;
 }
